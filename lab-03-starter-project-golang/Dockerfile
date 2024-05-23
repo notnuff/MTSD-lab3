@@ -12,10 +12,10 @@ RUN go build -o build/fizzbuzz
 
 FROM scratch
 
-WORKDIR /compile
+WORKDIR /run
 
-COPY --from=compile /compile/templates/ templates
+COPY --from=compile /compile/templates/ ./templates
 
-COPY --from=compile /compile/build/fizzbuzz fizzbuzz
+COPY --from=compile /compile/build/fizzbuzz ./fizzbuzz
 
 CMD ["./fizzbuzz", "serve"]
