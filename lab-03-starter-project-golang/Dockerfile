@@ -1,6 +1,6 @@
-FROM golang:1.22.3-alpine
+FROM golang:1.22.3-alpine AS compile
 
-WORKDIR /test
+WORKDIR /compile
 
 COPY go.mod go.sum .
 
@@ -10,4 +10,12 @@ COPY . .
 
 RUN go build -o build/fizzbuzz
 
-CMD ["./build/fizzbuzz", "serve"]
+FROM scratch
+
+WORKDIR /compile
+
+COPY --from=compile /compile/templates/ templates
+
+COPY --from=compile /compile/build/fizzbuzz fizzbuzz
+
+CMD ["./fizzbuzz", "serve"]

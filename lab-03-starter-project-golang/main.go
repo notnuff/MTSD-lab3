@@ -8,5 +8,5 @@ import "fizzbuzz/cmd"
 
 func main() {
 	cmd.Execute()
-	
+
 }
