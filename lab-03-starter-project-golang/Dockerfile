@@ -10,7 +10,7 @@ COPY . .
 
 RUN go build -o build/fizzbuzz
 	
-FROM gcr.io/distroless/static-debian11
+FROM gcr.io/distroless/static-debian12
 
 WORKDIR /run
 
