@@ -1,4 +1,4 @@
-#include "sample_project.h"
+#include "remove_whitespace.h"
 
 #include <sstream>
 
@@ -6,8 +6,8 @@
 
 TEST(HelloWorld, BasicTestName) {
     std::ostringstream oss;
-    oss << sample::HelloWorld{};
-    ASSERT_EQ("Hello World!", oss.str());
+    oss << string::GetNoWhitespaceString("Hello World!");
+    ASSERT_EQ("HelloWorld!", oss.str());
 }
 
 int main(int argc, char **argv) {

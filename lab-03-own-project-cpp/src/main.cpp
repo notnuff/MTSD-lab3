@@ -1,10 +1,9 @@
-#include "sample_project.h"
+#include "remove_whitespace.h"
 
 #include <boost/program_options.hpp>
 
 #include <iostream>
 
-// Наше приложение будет иметь один параметр командной строки - "--help"
 auto parseArgs(int argc, char* argv[]) {
     namespace po = boost::program_options;
     po::options_description desc("Allowed options");
@@ -20,7 +19,6 @@ auto parseArgs(int argc, char* argv[]) {
     po::store(parsed, vm);
     po::notify(vm);
 
-    // В C++17 больше нет необходимости использовать std::make_pair
     return std::pair(vm, desc);
 }
 
@@ -32,7 +30,7 @@ int main(int argc, char* argv[]) try {
         return 0;
     }
 
-    std::cout << sample::HelloWorld{} << std::endl;
+    std::cout << string::GetNoWhitespaceString("Dummy text without spaces") << std::endl;
 
     return 0;
 } catch (std::exception& e) {

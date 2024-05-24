@@ -1,0 +1,5 @@
+# ninja log v5
+1	2870	1716579951824086368	CMakeFiles/project_test.dir/test.cpp.o	74878526fa47bd91
+3	174	1716580013392907174	project_test	599e45b377581306
+2	3238	1716580016448947537	CMakeFiles/project_app.dir/main.cpp.o	b1fdfb94dff7f0fb
+3240	3408	1716580016624949861	project_app	d4d31cd5ff5dfe0c

@@ -9,7 +9,7 @@ find_package(Boost COMPONENTS program_options REQUIRED)
 include_directories(${BOOST_INCLUDE_DIRS})
 
 # створюємо виконуваний файл нашого застосунку
-add_executable(project_app main.cpp sample_project.h)
+add_executable(project_app main.cpp remove_whitespace.h)
 target_link_libraries(project_app ${Boost_LIBRARIES})
 
 # вмикаємо тестування
@@ -20,7 +20,7 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 # створюємо виконуваний файл наших тестів
-add_executable(project_test test.cpp sample_project.h)
+add_executable(project_test test.cpp remove_whitespace.h)
 target_link_libraries(project_test ${GTEST_LIBRARIES} pthread)
 
 # додаємо його в тестовий набір CMake

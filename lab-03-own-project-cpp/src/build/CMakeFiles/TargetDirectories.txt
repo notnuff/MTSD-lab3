@@ -1,0 +1,5 @@
+/home/notnuff/KPI/МТРПЗ (методології і технології розробки програмного забезпечення)/lab-3/MTSD-lab3/lab-03-own-project-cpp/src/build/CMakeFiles/project_app.dir
+/home/notnuff/KPI/МТРПЗ (методології і технології розробки програмного забезпечення)/lab-3/MTSD-lab3/lab-03-own-project-cpp/src/build/CMakeFiles/project_test.dir
+/home/notnuff/KPI/МТРПЗ (методології і технології розробки програмного забезпечення)/lab-3/MTSD-lab3/lab-03-own-project-cpp/src/build/CMakeFiles/test.dir
+/home/notnuff/KPI/МТРПЗ (методології і технології розробки програмного забезпечення)/lab-3/MTSD-lab3/lab-03-own-project-cpp/src/build/CMakeFiles/edit_cache.dir
+/home/notnuff/KPI/МТРПЗ (методології і технології розробки програмного забезпечення)/lab-3/MTSD-lab3/lab-03-own-project-cpp/src/build/CMakeFiles/rebuild_cache.dir

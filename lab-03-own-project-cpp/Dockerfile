@@ -14,12 +14,21 @@ WORKDIR /proj/build/src
 
 RUN cmake -S ./ -B ./build && cmake --build ./build
 
-#FROM gcr.io/distroless/static-debian12 as bin
-#
-#WORKDIR /bin
-#
-#COPY --from=build
+#RUN mkdir -p /tmp/dependencies
 
+#COPY ["/usr/lib32/", "/tmp/dependencies"]
+
+#FROM ubuntu as dependencies
+
+FROM ubuntu as bin
+
+COPY --from=build /proj/build/src/build/project_app /
+
+#COPY --from=dependencies /usr/lib32/ /usr/lib32/
+
+#ENV LD_LIBRARY_PATH /
+
+CMD ["/project_app"]
 
 
 
