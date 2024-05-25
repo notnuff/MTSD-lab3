@@ -10,7 +10,7 @@ COPY . .
 
 RUN go build -o build/fizzbuzz
 	
-FROM gcr.io/distroless/static-debian12
+FROM alpine
 
 WORKDIR /run
 
