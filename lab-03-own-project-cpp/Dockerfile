@@ -12,7 +12,9 @@ COPY ./src ./src
 
 WORKDIR /proj/build/src
 
-RUN cmake -S ./ -B ./build && cmake --build ./build
+RUN cmake -S ./ -B ./build && cmake --build ./build && \
+    CTEST_OUTPUT_ON_FAILURE=TRUE cmake --build ./build --target test
+
 
 #RUN mkdir -p /tmp/dependencies
 

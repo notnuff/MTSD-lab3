@@ -7,7 +7,7 @@
 TEST(HelloWorld, BasicTestName) {
     std::ostringstream oss;
     oss << string::GetNoWhitespaceString("Hello World!");
-    ASSERT_EQ("HelloWorld!", oss.str());
+    ASSERT_EQ("HellWorld!", oss.str());
 }
 
 int main(int argc, char **argv) {
